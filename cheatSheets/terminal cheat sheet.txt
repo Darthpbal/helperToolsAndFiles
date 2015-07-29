@@ -1,0 +1,32 @@
+cd / = root directory
+cd ../ = one directory up
+cd - = last directory
+
+netstat = print network connection
+mkdir = create directories
+cp = copy file
+rm = remove files
+shred = remove more securely
+apt-cache search = package search function
+man intro
+free = amount of free space
+df = useage of disk space
+top = display top processes
+CTRL-R = search command history
+which = locate a command
+
+sudo service mysql status = check if mysql server is running
+netstat-tunlo = shows what port the server is running on
+mysql -u root -p = log into mysql server
+cat = output the contents of a file to the terminal
+echo = echo stuff to the terminal to display as a string
+> = redirects standard output to a file and overwrites the whole file
+>> = redirects standard output to append to a file.
+< = takes the standard input from the file on the right and inputs it into the prorgam on the left. EX: $ cat < lakes.txt
+| = pipe the standard output of the thing on the left into the prorgam on the right
+grep = search strings
+wc = word count
+sort = sorts stuff alphabetically
+uniq = filters out adjacent duplicate lines in a file
+sed = stands for "stream editor", this can accenpt a standard input and modify it based on an expression before displaying it as output data
+

@@ -1,0 +1,7 @@
+git status
+git add .
+git commit -am "<message>"
+git branch = lsit branches
+git checkout -- <file> = undo file modifications up to last commit
+git diff = list explicit changes up to last commit.
+git checkout -b <name> = make new branch called <name> and switch to it.
