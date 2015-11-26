@@ -30,3 +30,5 @@ sort = sorts stuff alphabetically
 uniq = filters out adjacent duplicate lines in a file
 sed = stands for "stream editor", this can accenpt a standard input and modify it based on an expression before displaying it as output data
 
+ps aux | grep docker = lists processes and finds docker.
+
