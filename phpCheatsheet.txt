@@ -1,0 +1,29 @@
+php email library
+	swiftmailer
+
+class notes
+	private class member - no inheritance
+	protected class member - can be inherited
+
+magic methods/magic functions
+	__construct
+	__destruct
+	__get
+	__set
+	__unset
+
+boolean evaluation
+	truthy		falsy
+	boolean true	boolean false
+	nonzero numbers	0
+	"strings"	""
+	objects		undefined
+	arrays		null
+	functions	NaN
+
+echo all predefined vars pertinent to any given web server & the scripts execution environment
+	foreach($_SERVER as $kay => $value){
+		echo "$var => $value <br/>";
+	}
+
+

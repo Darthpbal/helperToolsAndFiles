@@ -1,0 +1,10 @@
+Css
+	.element = class
+	#element = ID
+Html
+Javascript
+Jquery
+	$("[id^=jander]") => find all elements of id starting with jander
+	$("[id$=jander]") => all ending with jander
+	$("[id*=jander]") => all containing jander
+	$("#someMain").on('click', "input[id^=name]", func(){});
