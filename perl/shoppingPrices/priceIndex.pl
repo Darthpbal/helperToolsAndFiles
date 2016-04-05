@@ -9,14 +9,17 @@ use Switch;
 # - if over budget, show line items, subtotal, budget, and how much the subtotal is over the budget
 # - create ability to redefine the quantities or remove line items based on name
 
+# - make the printing function output to an html file since the dropbox app has a built in html viewer
+
 my $total = 0;
 my %prices;
 my @shoppingList;
 
 sub run {
-	open(shList, ">shoppingList.txt") or die("could not open shopping list for writing");
+	open(shList, ">shoppingList.html") or die("could not open shopping list for writing");
 	print("\nWhat are you thinking about buying? item followed by quantity\n\n");
-	print shList ("product\t\tquantity\t\tlineTot\n");
+	print shList ("<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Shopping list</title>\n</head>\n<body class=\"container\">\n<div class=\"panel panel-info\">\n<div class=\"panel-heading\">\n<h3 class=\"panel-title\">Shopping list</h3>\n</div>\n<div class=\"panel-body\">\n<table class=\"table\">");
+	print shList ("<tr><th>Product</th><th>Quantity</th><th>lineTot</th></tr><tr><hr></tr>");
 	while (1) {
 		my $product = <STDIN>;
 		chomp($product);
@@ -24,14 +27,15 @@ sub run {
 		if($prices{$product}) {
 			my $quantity = <STDIN>;
 			chomp($quantity);
-			print shList ($product . "\t\t" . $quantity . "\t\t" . $prices{$product} * $quantity . "\n");
+			print shList &printHtmlRow($product, $quantity, $prices{$product} * $quantity);
+			# print shList ("[]" . $product . "\t\t" . $quantity . "\t\t" . $prices{$product} * $quantity . "\n");
 			$total += $prices{$product} * $quantity;
 		}
 		else{
 			if($product eq "exit") {
-				my $result = "\n\nSubtotal = $total \n";
-				print($result);
-				print shList ($result);
+				my $result = "Subtotal = \$$total";
+				print("\n\n" . $result . " \n");
+				print shList ("</table></div><div class=\"panel-footer\"><p>" . $result . "</p></div></div></body><footer><!-- Latest compiled and minified CSS --><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" integrity=\"sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7\" crossorigin=\"anonymous\"<!-- Optional theme --><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css\" integrity=\"sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r\" crossorigin=\"anonymous\"<!-- Latest compiled and minified JavaScript --><script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\" integrity=\"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS\" crossorigin=\"anonymous\"></script></footer></html>");
 				close(shList);
 				die("killing program\n");
 			}else{
@@ -53,7 +57,7 @@ sub run {
 					close(indxSrc);
 
 					$prices{$product} = $price;
-					print shList ($product . "\t\t" . $quantity . "\t\t" . $prices{$product} * $quantity . "\n");
+					print shList ("[]" . $product . "\t\t" . $quantity . "\t\t" . $prices{$product} * $quantity . "\n");
 					$total += $prices{$product} * $quantity;
 				}
 			}
@@ -90,6 +94,12 @@ sub constrPricesHash {
 	}
 }
 
+sub printHtmlRow {
+	my $product = shift;
+	my $quantity = shift;
+	my $lineTot = shift;
+	return ("<tr><td><div class=\"checkbox\"><label><input type=\"checkbox\">$product</label></div></td><td>$quantity</td><td>\$$lineTot</td></tr>");
+}
 
 open(indexFile, "<index") or die("couldn't open index file");
 &constrPricesHash();
