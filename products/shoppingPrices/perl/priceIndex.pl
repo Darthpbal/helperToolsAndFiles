@@ -57,7 +57,7 @@ sub run {
 					close(indxSrc);
 
 					$prices{$product} = $price;
-					print shList ("[]" . $product . "\t\t" . $quantity . "\t\t" . $prices{$product} * $quantity . "\n");
+					print shList &printHtmlRow($product, $quantity, $prices{$product} * $quantity);
 					$total += $prices{$product} * $quantity;
 				}
 			}

@@ -2,6 +2,10 @@ run:confRun backup
 	@echo calculating shopping list
 	perl ./*pl
 
+export:
+	@echo exporting...
+	mv -f ./*.html ~/Dropbox/
+
 display:confDisp
 	@echo displaying prices
 	perl ./*pl
@@ -28,7 +32,7 @@ backup:
 
 clean:
 	@echo cleaning
-	rm -f ./*.txt options
+	rm -f ./*.txt ./*.html options
 	clear
 
 restore:
