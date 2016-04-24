@@ -7,19 +7,13 @@ using namespace std;
 
 int getCommaPos(string line);
 void printHeader(ofstream& outputFile);
+void createTextFiles(string fileName1, string fileName2, ifstream& sourceFile1, ofstream& sourceFile2);
 
 int main(){
     //Open input/output files
-    ifstream indexFile("index");
-    ofstream outputFile("options");
-    if(!indexFile){
-        cout << "unable to open the index file\n";
-        exit(-1);
-    }
-    if(!outputFile){
-        cout << "unable to open the output file\n";
-        exit(-1);
-    }
+    ifstream indexFile;
+    ofstream outputFile;
+    createTextFiles("index", "options", indexFile, outputFile);
 
     //print the options header
     printHeader(outputFile);
@@ -54,4 +48,13 @@ void printHeader(ofstream& outputFile){
     outputFile << left << setw(15) << "Line name";
     outputFile << right << setw(7) << "Price" << endl;
     outputFile << "======================\n";
+}
+
+void createTextFiles(string fileName1, string fileName2, ifstream& sourceFile1, ofstream& sourceFile2){
+	sourceFile1.open(fileName1.c_str());
+	sourceFile2.open(fileName2.c_str());
+	if(!sourceFile1 || !sourceFile2 ){
+        cout << "unable to open one of the files\n";
+        exit(-1);
+    }
 }
