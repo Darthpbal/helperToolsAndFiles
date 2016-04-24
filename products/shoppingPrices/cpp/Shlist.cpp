@@ -21,7 +21,7 @@ void Shlist::openFile(){
 
 
 void Shlist::makeRow(string name, int quantity, double lineTot){
-    outputFile << "\n<tr><td><div class=\"checkbox\"><label><input type=\"checkbox\">" << name << "</label></div></td><td>" << quantity << "</td><td>$" << lineTot << "</td></tr>\n";
+    outputFile << "\n<tr><td><div class=\"checkbox\"><label><input type=\"checkbox\">" << name << "</label></div></td><td>" << quantity << "</td><td>$" << setprecision(4) << lineTot << "</td></tr>\n";
     subTotal += lineTot;
 }
 
@@ -32,7 +32,7 @@ void Shlist::finishTable(){
 
 
 void Shlist::printSubtot(){
-    outputFile << "</div><div class=\"panel-footer\"><p>Subtotal = $" << setprecision(2) << subTotal << "</p></div></div>\n";
+    outputFile << "</div><div class=\"panel-footer\"><p>Subtotal = $" << setprecision(4) << subTotal << "</p></div></div>\n";
 }
 
 
