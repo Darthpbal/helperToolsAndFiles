@@ -1,0 +1,16 @@
+-----------------------------
+EMPLOYEE: Salemander, Oliver
+
+PAY RATE:           $   13.66
+HOURS:                 106.00
+GROSS PAY:          $ 1625.54
+MED INS DEDUCT:     $   64.97
+401K DEDUCT:        $   97.53
+FED TAX GROSS PAY:  $ 1463.04
+TAX - FEDERAL:      $  186.54
+TAX - OASDI:        $   90.71
+TAX - MEDICARE:     $   21.21
+TAX - STATE:        $   50.33
+TAX - TOTAL:        $  348.79
+NET PAY:            $ 1114.25
+-----------------------------

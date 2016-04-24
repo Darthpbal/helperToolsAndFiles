@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1442442158 source:/home/darthpbal/Dropbox/School/Fall-2015/CSE100/LAB/lab03/lab03/lab03.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+
