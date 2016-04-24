@@ -5,6 +5,7 @@ avocados,0.99
 bagel,3.49
 baggie,5.00
 bananas,2.00
+bbqSauce,3
 bodywash,2.99
 bread,2.49
 carrot,1.00
@@ -39,7 +40,9 @@ peaches,2.99
 peanutButter,1.50
 pepper,3.99
 pepperoni,3.00
+pickles,2
 plates,2.69
+plums,2
 pocky,2.49
 pomade,6
 poptarts,1.99
@@ -51,6 +54,3 @@ toothbrush,2.00
 toothpaste,2.99
 turkey,3.49
 waterBottles,2
-bbqSauce,3
-plums,2
-pickles,2
