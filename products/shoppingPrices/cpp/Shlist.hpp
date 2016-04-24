@@ -9,11 +9,11 @@ using namespace std;
 class Shlist{
 public:
     Shlist();
-    void makeRow(string name, int quantity, double lineTot);
     void openFile();
-    void closeFile();
-    void printSubtot();
+    void makeRow(string name, int quantity, double lineTot);
     void finishTable();
+    void printSubtot();
+    void closeFile();
 private:
     ofstream outputFile;
     string header;
