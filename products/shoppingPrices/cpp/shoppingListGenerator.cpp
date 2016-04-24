@@ -10,6 +10,7 @@ int getCommaPos(string line);
 int countOptions(ifstream& indexFile);
 void constructPriceItemArray(ifstream& indexFile, string items[], double prices[]);
 int searchArrItems(string needle, string hayStack[], int hayStackSize);
+void addNewItem(Shlist& myShList,string response);
 
 int main(){
     ifstream indexFile("index");
@@ -25,11 +26,7 @@ int main(){
     indexFile.clear();
     indexFile.seekg(0, indexFile.beg);
     constructPriceItemArray(indexFile, items, prices);
-    // for(int i = 0; i < optionsCount; i++){
-    //     cout << setw(15) << left << items[i];
-    //     cout << setw(7) << right << prices[i];
-    //     cout << "\titem number = " << i << endl;
-    // }
+    indexFile.close();
 
     Shlist myShList;
     cout << "\nWhat are you thinking about buying? Item followed by quantity\n\n";
@@ -40,20 +37,33 @@ int main(){
         if(itemPos > -1){
             int quantity;
             cin >> quantity;
-            // cout << "item pos = " << itemPos << endl;
-            cout << items[itemPos] << endl;
-            cout << prices[itemPos] * quantity << endl;
             myShList.makeRow(items[itemPos], quantity, prices[itemPos] * quantity);
         }else{
-            cout << "item not found\n";
+            cout << "Item not found... Add new item? (yes/no)\n";
+            string confirmation;
+            cin >> confirmation;
+            if(confirmation == "yes") addNewItem(myShList, response);
         }
         cin >> response;
     }
     myShList.closeFile();
 
     cout << "\nTerminating...\n";
-    indexFile.close();
 	return 0;
+}
+
+
+void addNewItem(Shlist& myShList,string response){
+    double unitPrice;
+    int quantity;
+    cout << "What's the unit price? ";
+    cin >> unitPrice;
+    cout << "How many? ";
+    cin >> quantity;
+    ofstream indexFile("index", ios::app);
+    indexFile << response << "," << unitPrice << endl;
+    indexFile.close();
+    myShList.makeRow(response, quantity, unitPrice * quantity);
 }
 
 
@@ -96,10 +106,8 @@ void constructPriceItemArray(ifstream& indexFile, string items[], double prices[
 int searchArrItems(string needle, string hayStack[], int hayStackSize){
     for(int i = 0; i < hayStackSize; i++){
         if(needle == hayStack[i]){
-            // cout << setw(15) << left << hayStack[i] << "\t" << i << endl << "match\n";
             return i;
         }else{
-            // cout << setw(15) << left << hayStack[i] << "\t" << i << endl;
         }
     }
     return -1;

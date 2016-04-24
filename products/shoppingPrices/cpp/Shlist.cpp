@@ -16,7 +16,6 @@ Shlist::Shlist(){
 
 void Shlist::openFile(){
     outputFile.open("shoppingList.html");
-    cout << header;
     outputFile << topOfFile << endl << header;
 }
 
