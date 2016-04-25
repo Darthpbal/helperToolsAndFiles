@@ -11,3 +11,9 @@ this program is best used with this workflow: [With tmux/make/g++ installed and 
  - If entering a new item, simply type a new name, and enter "yes" when prompted if creating a new entry, and provide further info
  - When finished entering shopping list items, type "exit" and the program will cleanup and terminate, resulting in an html result file.
  - Move html file to some place accessible with a mobile browser at the grovery store. And check off the items as you gather them.
+
+
+
+#Todo
+ - [ ] Add ability to add new items in the form using jscrip/jquery
+ - [ ] Find nice way to run on mobile
