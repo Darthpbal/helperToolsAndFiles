@@ -13,28 +13,23 @@ Shlist::Shlist(){
     openFile();
 }
 
-
 void Shlist::openFile(){
     outputFile.open("shoppingList.html");
     outputFile << topOfFile << endl << header;
 }
-
 
 void Shlist::makeRow(string name, int quantity, double lineTot){
     outputFile << "\n<tr><td><div class=\"checkbox\"><label><input type=\"checkbox\">" << name << "</label></div></td><td>" << quantity << "</td><td>$" << setprecision(4) << lineTot << "</td></tr>\n";
     subTotal += lineTot;
 }
 
-
 void Shlist::finishTable(){
     outputFile << "</table>\n";
 }
 
-
 void Shlist::printSubtot(){
     outputFile << "</div><div class=\"panel-footer\"><p>Subtotal = $" << setprecision(4) << subTotal << "</p></div></div>\n";
 }
-
 
 void Shlist::closeFile(){
     finishTable();
