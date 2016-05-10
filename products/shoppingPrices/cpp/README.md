@@ -17,3 +17,6 @@ this program is best used with this workflow: [With tmux/make/g++ installed and 
 #Todo
  - [ ] Add ability to add new items in the form using jscrip/jquery
  - [ ] Find nice way to run on mobile
+ - [ ] Streamline the display function to use less commands/typing
+ - [ ] add an "edit entry" function for correcting entries in program
+ - [ ] Add "appending/removing item" function in C++ as well as in javascript on the page for editing at the store
