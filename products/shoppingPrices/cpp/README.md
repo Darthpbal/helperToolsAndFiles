@@ -20,3 +20,4 @@ this program is best used with this workflow: [With tmux/make/g++ installed and 
  - [ ] Streamline the display function to use less commands/typing
  - [ ] add an "edit entry" function for correcting entries in program
  - [ ] Add "appending/removing item" function in C++ as well as in javascript on the page for editing at the store
+ - [ ] Add a "store" class to continuously update and average taxes from real data and to seperate different store apparent tax amount. Also helps manage different effects of different memberships
