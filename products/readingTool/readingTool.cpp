@@ -1,3 +1,4 @@
+////add parts to the report to show section sizes summed, incorperate notes on sections as well & act as a lookup reference
 #include <iostream>
 #include <string>
 #include <iomanip>
