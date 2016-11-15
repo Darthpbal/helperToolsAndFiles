@@ -11,26 +11,26 @@ int main(){
 	double exam_avg, exam_stddev, exam_variance;
 
 	cout << fixed << setprecision(2);
-	cout << "something , give me your exams!!!!" << somevar;
-	// cout << "Enter exam score for Homer: ";
-	// cin >> exam1;
-	//
-	// cout << "Enter exam score for Lisa: ";
-	// cin >> exam2;
-	//
-	// cout << "Enter exam score for Ralph: ";
-	// cin >> exam3;
-	//
-	// exam_avg = (exam1 + exam2 + exam3)/static_cast<double>(NUM_STUDENTS);
-	//
-	// cout << endl; // Send empty line to cout
-	//
-	// cout << "The average exam score is:      " << exam_avg << "%" << endl;
-	//
-	// exam_variance = (pow(exam1 - exam_avg, 2) + pow(exam2 - exam_avg, 2) + pow(exam3 - exam_avg, 2))/(NUM_STUDENTS - 1);
-	// exam_stddev = sqrt(exam_variance);
-	//
-	// cout << "The exam standard deviation is: " << exam_stddev << endl;
+	// cout << "something , give me your exams!!!!" << somevar;
+	cout << "Enter exam score for Homer: ";
+	cin >> exam1;
+
+	cout << "Enter exam score for Lisa: ";
+	cin >> exam2;
+
+	cout << "Enter exam score for Ralph: ";
+	cin >> exam3;
+
+	exam_avg = (exam1 + exam2 + exam3)/static_cast<double>(NUM_STUDENTS);
+
+	cout << endl; // Send empty line to cout
+
+	cout << "The average exam score is:      " << exam_avg << "%" << endl;
+
+	exam_variance = (pow(exam1 - exam_avg, 2) + pow(exam2 - exam_avg, 2) + pow(exam3 - exam_avg, 2))/(NUM_STUDENTS - 1);
+	exam_stddev = sqrt(exam_variance);
+
+	cout << "The exam standard deviation is: " << exam_stddev << endl;
 
 	return 0;
 }
