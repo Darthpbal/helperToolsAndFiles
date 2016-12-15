@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/darthpbal/Documents/GitHub/helperToolsAndFiles/languages/verilog/60SecTimer/src/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/darthpbal/Documents/GitHub/helperToolsAndFiles/languages/verilog/60SecTimer/src/SevSegDriver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SevSegDriver
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/darthpbal/Documents/GitHub/helperToolsAndFiles/languages/verilog/60SecTimer/src/timer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module timer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/darthpbal/Documents/GitHub/helperToolsAndFiles/languages/verilog/60SecTimer/src/timerTb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module timer_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/darthpbal/Documents/GitHub/helperToolsAndFiles/languages/verilog/60SecTimer/vivado_src/vivado_src.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
