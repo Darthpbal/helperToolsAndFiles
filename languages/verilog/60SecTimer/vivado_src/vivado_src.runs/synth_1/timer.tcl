@@ -5,6 +5,8 @@
 set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35ticpg236-1L
 
 set_param project.compositeFile.enableAutoGeneration 0
@@ -17,6 +19,7 @@ set_property vhdl_version vhdl_2k [current_fileset]
 read_verilog -library xil_defaultlib {
   C:/Users/darthpbal/Documents/GitHub/helperToolsAndFiles/languages/verilog/60SecTimer/src/debounce.v
   C:/Users/darthpbal/Documents/GitHub/helperToolsAndFiles/languages/verilog/60SecTimer/src/SevSegDriver.v
+  C:/Users/darthpbal/Documents/GitHub/helperToolsAndFiles/languages/verilog/60SecTimer/src/bcdTo1Hot.v
   C:/Users/darthpbal/Documents/GitHub/helperToolsAndFiles/languages/verilog/60SecTimer/src/timer.v
 }
 read_xdc C:/Users/darthpbal/Documents/GitHub/helperToolsAndFiles/languages/verilog/60SecTimer/src/basys.xdc

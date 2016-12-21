@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date             : Wed Dec 14 23:55:00 2016
+| Date             : Wed Dec 21 01:57:11 2016
 | Host             : LAPTOP-8GF0SKKK running 64-bit major release  (build 9200)
 | Command          : report_power -file timer_power_routed.rpt -pb timer_power_summary_routed.pb
 | Design           : timer
@@ -50,13 +50,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      172 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       65 |     20800 |            0.31 |
-|   Register     |    <0.001 |       74 |     41600 |            0.18 |
+| Slice Logic    |    <0.001 |      195 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       75 |     20800 |            0.36 |
+|   Register     |    <0.001 |       78 |     41600 |            0.19 |
 |   CARRY4       |    <0.001 |       13 |      8150 |            0.16 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |    <0.001 |      145 |       --- |             --- |
-| I/O            |     0.023 |       13 |       106 |           12.26 |
+| Signals        |    <0.001 |      165 |       --- |             --- |
+| I/O            |     0.023 |       28 |       106 |           26.42 |
 | Static Power   |     0.062 |          |           |                 |
 | Total          |     0.087 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+

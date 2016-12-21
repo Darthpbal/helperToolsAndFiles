@@ -14,8 +14,8 @@ module timer (
         input btnC,         //up button on basys board
         output [3:0] segEn, //basys seven segment enable bus
         // output segDec,         //seven segment decimal point
-        output [6:0] seg   //seven segment signals
-        output [15:0] led   //basys board LED array
+        output [6:0] seg,   //seven segment signals
+        output [14:0] led   //basys board LED array
     );
 
     wire reset;
@@ -96,7 +96,7 @@ module timer (
         end
 
         reg [3:0] hourCount = 0;
-        bcdTo1Hot hoursDisplay(hourCount);
+        bcdTo1Hot hoursDisplay(hourCount, led);
         always @ ( posedge minuteTenthSig, posedge reset ) begin
             if(reset) begin
                 dispD3 <= 0;

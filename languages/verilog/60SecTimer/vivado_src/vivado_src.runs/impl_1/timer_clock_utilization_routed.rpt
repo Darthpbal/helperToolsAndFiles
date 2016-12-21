@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date              : Wed Dec 14 23:55:00 2016
+| Date              : Wed Dec 21 01:57:11 2016
 | Host              : LAPTOP-8GF0SKKK running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file timer_clock_utilization_routed.rpt
 | Design            : timer
@@ -47,7 +47,7 @@ Table of Contents
 +-------+--------------------+---------------+------+-------+-------+
 | Index | BUFG Cell          | Net Name      | BELs | Sites | Fixed |
 +-------+--------------------+---------------+------+-------+-------+
-|     1 | clk_IBUF_BUFG_inst | clk_IBUF_BUFG |   55 |    20 |    no |
+|     1 | clk_IBUF_BUFG_inst | clk_IBUF_BUFG |   55 |    19 |    no |
 +-------+--------------------+---------------+------+-------+-------+
 
 
@@ -68,10 +68,10 @@ Table of Contents
 +-------+--------------------+----------------+------+-------+-------+
 | Index | Local Clk Src      | Net Name       | BELs | Sites | Fixed |
 +-------+--------------------+----------------+------+-------+-------+
-|     1 | minuteTenthSig_reg | minuteTenthSig |    4 |     2 |    no |
-|     2 | minuteOneSig_reg   | minuteOneSig   |    5 |     1 |    no |
-|     3 | secSig_reg         | secSig_reg_n_0 |    5 |     2 |    no |
-|     4 | tenthSig_reg       | tenthSig       |    5 |     1 |    no |
+|     1 | minuteOneSig_reg   | minuteOneSig   |    5 |     1 |    no |
+|     2 | secSig_reg         | secSig_reg_n_0 |    5 |     2 |    no |
+|     3 | tenthSig_reg       | tenthSig       |    5 |     1 |    no |
+|     4 | minuteTenthSig_reg | minuteTenthSig |    8 |     3 |    no |
 +-------+--------------------+----------------+------+-------+-------+
 
 
@@ -84,7 +84,7 @@ Table of Contents
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  9600 |    0 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   74 | 12000 |    0 |  1800 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   78 | 12000 |    0 |  1800 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  9600 |    0 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 12000 |    0 |  1800 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 14400 |    0 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
@@ -131,28 +131,28 @@ add_cells_to_pblock [get_pblocks  {CLKAG_clk_IBUF_BUFG}] [get_cells -filter { PR
 resize_pblock [get_pblocks {CLKAG_clk_IBUF_BUFG}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
-# Clock net "minuteOneSig" driven by instance "minuteOneSig_reg" located at site "SLICE_X62Y24"
+# Clock net "minuteOneSig" driven by instance "minuteOneSig_reg" located at site "SLICE_X62Y26"
 #startgroup
 create_pblock {CLKAG_minuteOneSig}
 add_cells_to_pblock [get_pblocks  {CLKAG_minuteOneSig}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="minuteOneSig"}]]]
 resize_pblock [get_pblocks {CLKAG_minuteOneSig}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
-# Clock net "minuteTenthSig" driven by instance "minuteTenthSig_reg" located at site "SLICE_X65Y24"
+# Clock net "minuteTenthSig" driven by instance "minuteTenthSig_reg" located at site "SLICE_X63Y27"
 #startgroup
 create_pblock {CLKAG_minuteTenthSig}
 add_cells_to_pblock [get_pblocks  {CLKAG_minuteTenthSig}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="minuteTenthSig"}]]]
 resize_pblock [get_pblocks {CLKAG_minuteTenthSig}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
-# Clock net "secSig_reg_n_0" driven by instance "secSig_reg" located at site "SLICE_X62Y20"
+# Clock net "secSig_reg_n_0" driven by instance "secSig_reg" located at site "SLICE_X60Y26"
 #startgroup
 create_pblock {CLKAG_secSig_reg_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_secSig_reg_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="secSig_reg_n_0"}]]]
 resize_pblock [get_pblocks {CLKAG_secSig_reg_n_0}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
-# Clock net "tenthSig" driven by instance "tenthSig_reg" located at site "SLICE_X63Y24"
+# Clock net "tenthSig" driven by instance "tenthSig_reg" located at site "SLICE_X63Y26"
 #startgroup
 create_pblock {CLKAG_tenthSig}
 add_cells_to_pblock [get_pblocks  {CLKAG_tenthSig}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="tenthSig"}]]]
