@@ -1,3 +1,15 @@
+/*
+    This program is for the 3G/4G/GPRS cell phone module by Libelium and
+    CookingHacks.
+    It's basically a cell phone arduino shield will call/sms/4G/GPS/functionality
+    like a cell phone.
+    For simplicity/laziness this board is referred to as the module/board/shield
+    through this file.
+    At the end of this file after all the code is an example output of how this
+    program works in it's current state. This program turned on the shield, sets
+    it to GPS mode, then repeatedly queries the GPS location of the board and prints to the screen.
+*/
+
 //sample gps output
 //lat, ns, log, ew, date, UTCtime, alt, speed, course(degrees)
 //3325.624481,N,11214.179376,W,080117,121733.0,281.5,0,0
