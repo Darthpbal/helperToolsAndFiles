@@ -39,6 +39,36 @@ RXI0        |||     tx  (UART TTL)
 
 
 
+
+
+
+
+
+/*  The contents of this block comment is what should be in a configuration text file called "LOGCON.txt" on the micro sd card in the logomatic, and the filesystem should be configured to be a FAT32 system.
+MODE = 0
+ASCII = N
+Baud = 4
+Frequency = 100
+Trigger Character = $
+Text Frame = 100
+AD1.3 = N
+AD0.3 = N
+AD0.2 = N
+AD0.1 = N
+AD1.2 = N
+AD0.4 = N
+AD1.7 = N
+AD1.6 = N
+Safety On = Y
+*/
+
+
+
+
+
+
+
+
 int charCount = 0;//this is global because I want to keep track of the same count after the loop restarts
 
 
