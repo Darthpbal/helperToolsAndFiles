@@ -1,0 +1,5 @@
+there is no stdio in arduino, therefore there's no printf or anything, so no way to fluidly print strings and replace with formatted variables. Here is a function someone made that does this. What if I made one too? Cuz this one is hard to understand...     
+
+-http://arduino.stackexchange.com/questions/176/how-do-i-print-multiple-variables-in-a-string
+
+
