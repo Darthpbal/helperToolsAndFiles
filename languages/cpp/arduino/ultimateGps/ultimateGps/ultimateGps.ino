@@ -32,6 +32,7 @@ void loop() {
     else {
         Serial.println("invalid answer");
     }
+    delay(200);//error extra bits of lines show up without this.
 }
 
 
@@ -92,6 +93,8 @@ bool sendATcommand(char* command, char* expectedAns, unsigned int timeout){
 
 /*
 current program output performance example
+it seems that the extra error line that happens
+during a fix is unpredictable in contents, but predictable that some short extra line will be there.
 
 
 114130.087,,,,,0,00,,,M,,M,,*71
