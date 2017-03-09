@@ -13,6 +13,15 @@ note on ultimate GPS output uart String:
     transmission end with a pair of \r\n carriage return and newline pair
     largest size line currently seen = 73 chars not counting endline characters
     input string line sizes vary depending on incoming sentence type and GPS fix status (gps fix yas/no)
+
+
+
+
+using the current SIM5218 methods, this program compiles to 2044 bytes or 6% of program space and 226 bytes (11%) dynamic memory
+
+a simple parsing example from the adafruit ultimate GPS library compiles to 11346 bytes (35%) program space and 932 bytes (45%) dynamic memory
+
+that's a reduction in program space by 82% (9302 bytes) and a reduction in dynamic memory by 76% (706 bytes)
 */
 
 void setup() {
