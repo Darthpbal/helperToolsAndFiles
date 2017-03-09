@@ -41,7 +41,13 @@ void loop() {
     //it appears that the null character in the c sctring must be directly after any actual chars
     if(flag == inChar){
         Serial.println("matched");
-        char responseString[100];
+        // char responseString[100];
+        // for(int i = 0; i < 6; i++ ){
+        //     responseString[i] = Serial.read();
+        //     if(i == 5){
+        //         responseString[i + 1] = 0;
+        //     }
+        // }
         responseString[0] = inChar;
         Serial.println(inChar);
         Serial.println(responseString[0]);
