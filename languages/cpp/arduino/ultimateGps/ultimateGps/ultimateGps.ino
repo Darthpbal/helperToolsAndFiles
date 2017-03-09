@@ -24,15 +24,15 @@ void setup() {
 void loop() {
     char tag[] = "$GPGGA,";
     char gpsRaw[100];
-    bool validAns = sendATcommand("", tag, 5000);
+    bool validAns = detectGPSTag(tag, 5000);
     if(validAns){
         readGPS(gpsRaw);
-        Serial.print(gpsRaw);
+        Serial.println(gpsRaw);
     }
     else {
         Serial.println("invalid answer");
     }
-    delay(200);//error extra bits of lines show up without this.
+    delay(250);//error extra bits of lines show up without this.
 }
 
 
@@ -60,7 +60,7 @@ void readGPS(char* gpsString){
 
 
 
-bool sendATcommand(char* command, char* expectedAns, unsigned int timeout){
+bool detectGPSTag(char* expectedAns, unsigned int timeout){
     int charPosition = 0;    //position in the response string.
     bool validAns = false;    //default value
     unsigned long timeAtTransmit;    //used to store the current time in milliseconds when the arduino started waiting for a response from the mobile board
@@ -68,7 +68,6 @@ bool sendATcommand(char* command, char* expectedAns, unsigned int timeout){
     memset(responseString, '\0', 100);    //sets the last character to null making this a c-string
     delay(100);    //let serial port stablize before transmitting
     while(Serial.available() > 0) Serial.read();    //clear incoming serial port buffer, so the only thing in the buffer will be the shield response
-    Serial.println(command);    //send command to the mobile board
     timeAtTransmit = millis();    //millis returns how many milliseconds have passed since the program started. Basically current time.
     do{
         if(Serial.available() != 0){//only do something if there's serial data to read
