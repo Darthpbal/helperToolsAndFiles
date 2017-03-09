@@ -38,18 +38,16 @@ void loop() {
     }
     while((inChar != flag) && ( (millis() - startTime) < timeout) );
 
-
+    //it appears that the null character in the c sctring must be directly after any actual chars
     if(flag == inChar){
-        char responseString[100];
-        int charPosition = 0;
-        memset(responseString, '\0', 100);
-        do{
-            responseString[charPosition] = Serial.read();
-            charPosition++;
-        }
-        while((charPosition < 10) && (inChar != ',') );
-        Serial.println(responseString);
         Serial.println("matched");
+        char responseString[100];
+        responseString[0] = inChar;
+        Serial.println(inChar);
+        Serial.println(responseString[0]);
+        Serial.println(responseString);
+        responseString[1] = 0;
+        Serial.println(responseString);
     }else {
         Serial.println("timeout");
     }
