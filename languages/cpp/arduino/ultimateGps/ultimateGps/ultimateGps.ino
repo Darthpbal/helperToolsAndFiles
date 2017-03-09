@@ -22,42 +22,55 @@ void setup() {
 
 
 void loop() {
-    int charPosition = 0;
-    int responseStringSize = 100;
-    char responseString[responseStringSize] = "";
-    char sentenceType[] = "$GPGGA,";
-    bool sentenceFlag = false;
-    int timeout = 1000;
-
-
-    while(Serial.available()) Serial.read();
-    char flag = '$', inChar;
-    unsigned long startTime = millis();
-    do{
-        inChar = Serial.read();
+    char tag[] = "$GPGGA,";
+    char gpsRaw[100];
+    bool validAns = sendATcommand("", tag, 5000);
+    if(validAns){
+        readGPS(gpsRaw);
+        Serial.print(gpsRaw);
     }
-    while((inChar != flag) && ( (millis() - startTime) < timeout) );
-
-    //it appears that the null character in the c sctring must be directly after any actual chars
-    if(flag == inChar){
-        Serial.println("matched");
-        // char responseString[100];
-        // for(int i = 0; i < 6; i++ ){
-        //     responseString[i] = Serial.read();
-        //     if(i == 5){
-        //         responseString[i + 1] = 0;
-        //     }
-        // }
-        responseString[0] = inChar;
-        Serial.println(inChar);
-        Serial.println(responseString[0]);
-        Serial.println(responseString);
-        responseString[1] = 0;
-        Serial.println(responseString);
-    }else {
-        Serial.println("timeout");
+    else {
+        Serial.println("invalid answer");
     }
 }
+
+
+void readGPS(char* gpsString){
+    int gpsChar = 0;    //character position 0
+    do{
+        while(Serial.available() == 0);    //wait for incoming gps data
+        gpsString[gpsChar] = Serial.read();    //store char into gps string
+        gpsChar++;    //move to next position
+    }
+    while(gpsString[gpsChar - 1] != '\r');    //this board has a "cairraige return" and "line feed" and the end of each transmission. this "\r" is the cairraige return. This loops until that is seen and then the NULL character "\0" is set at the end to be a valid c-string that can be used with serial print.
+    gpsString[gpsChar] = '\0';
+}
+
+
+bool sendATcommand(char* command, char* expectedAns, unsigned int timeout){
+    int charPosition = 0;    //position in the response string.
+    bool validAns = false;    //default value
+    unsigned long timeAtTransmit;    //used to store the current time in milliseconds when the arduino started waiting for a response from the mobile board
+    char responseString[100];    //char arracy to store the mobile board response
+    memset(responseString, '\0', 100);    //sets the last character to null making this a c-string
+    delay(100);    //let serial port stablize before transmitting
+    while(Serial.available() > 0) Serial.read();    //clear incoming serial port buffer, so the only thing in the buffer will be the shield response
+    Serial.println(command);    //send command to the mobile board
+    timeAtTransmit = millis();    //millis returns how many milliseconds have passed since the program started. Basically current time.
+    do{
+        if(Serial.available() != 0){//only do something if there's serial data to read
+            responseString[charPosition] = Serial.read();    //serial read stored one byte (eight bits is one char), and store it into the current char position in the response string
+            charPosition++;    //move to next char position
+            if(strstr(responseString, expectedAns) != NULL){//this function returns null if expectedAns can't be found when searching through responseString
+                validAns = true;    //if the expectedAns was found inside responseString, then the answer is valid.
+            }
+        }
+    }//while answer is valid and while (current time - time when command was sent) are less than the timeout
+    while((validAns == false) && ((millis() - timeAtTransmit) < timeout));
+    return validAns;    //output whether or not the answer was valid.
+}
+
+
 
 
 // $GPVTG,258.10,T,,M,0.02,N,0.04,K,D*30
