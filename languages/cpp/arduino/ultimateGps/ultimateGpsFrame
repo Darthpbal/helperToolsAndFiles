@@ -15,7 +15,7 @@ void setup() {
     }
     if(gpsPrefix == '$') Serial.println("GPS ready!!!");
     else Serial.println("GPS error");
-    //end og GPS check
+    //ending GPS check
 
     Serial.println("Ending startup");
     delay(500);
