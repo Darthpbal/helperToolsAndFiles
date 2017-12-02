@@ -10,7 +10,8 @@ boolean trigger = true;
 
 void setup(){
   //size(200, 200);
-  myPort = new Serial(this, "/dev/ttyUSB0", 9600);
+  println(Serial.list());
+  myPort = new Serial(this, "/dev/ttyUSB1", 9600);
   
   try {
     rbt = new Robot();

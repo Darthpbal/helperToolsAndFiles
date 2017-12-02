@@ -1,7 +1,7 @@
-const int clkPin = A4; //the clk attach to pin2
-const int dtPin = A5; //the dt attach to pin3
-const int swPin = 2;//the number of the button
-const int statLed = A3;
+const int clkPin = 7; //the clk attach to pin2
+const int dtPin = 8; //the dt attach to pin3
+const int swPin = 12;//the number of the button
+const int statLed = 9;
 
 unsigned long transmitTime = 0;
 unsigned int transmitDelay = 1000;

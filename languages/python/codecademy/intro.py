@@ -293,7 +293,7 @@ print menu['Chicken Alfredo']
 
 # Your code here: Add some dish-price pairs to menu!
 menu["chicken nuggets"] = 4.20
-menu["eatadick.com.org"] = 42.00
+menu["hbmadfjhv.com.org"] = 42.00
 menu["blahblahblahblahblahblah"] = 4.00
 
 
