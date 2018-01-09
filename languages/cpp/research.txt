@@ -1,0 +1,7 @@
+found this library that can assist with formatte printing
+http://arduiniana.org/libraries/streaming/
+
+light weight string class for formatted text
+http://arduiniana.org/libraries/PString/
+
+

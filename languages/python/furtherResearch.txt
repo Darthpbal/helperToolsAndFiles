@@ -1,0 +1,16 @@
+Now that I know python, I can try to explore graphing.
+
+
+Here are some sources for digging further:
+
+    Matplotlib
+    https://matplotlib.org/
+
+    Numpy
+    http://www.numpy.org/
+
+    Scipy
+    https://www.scipy.org/
+
+    Plotly
+    https://plot.ly/python/

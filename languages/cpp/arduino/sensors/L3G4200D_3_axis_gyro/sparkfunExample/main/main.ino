@@ -29,9 +29,9 @@
 #include "L3G4200D.h"
 
 // pin definitions
-const int int2pin = 6;
-const int int1pin = 7;
-const int chipSelect = 10;
+//const int int2pin = 6;/
+//const int int1pin = 7;/
+const int chipSelect = 6;
 
 // gyro readings
 int x, y, z;
@@ -42,16 +42,20 @@ void setup()
   
   // Start the SPI library:
   SPI.begin();
-  SPI.setDataMode(SPI_MODE3);
-  SPI.setClockDivider(SPI_CLOCK_DIV8);
+//  SPI.setDataMode(SPI_MODE3);
+//  SPI.setClockDivider(SPI_CLOCK_DIV8);
   
-  pinMode(int1pin, INPUT);
-  pinMode(int2pin, INPUT);
+//  pinMode(int1pin/, INPUT);
+//  pinMode(int2pin, I/NPUT);
   pinMode(chipSelect, OUTPUT);
   digitalWrite(chipSelect, HIGH);
   delay(100);
   
-  setupL3G4200D(2);  // Configure L3G4200 with selectabe full scale range
+  Serial.println(setupL3G4200D(2));
+  Serial.println(0xD3, HEX);
+  Serial.println(readRegister(WHO_AM_I), HEX);
+  
+  
   // 0: 250 dps
   // 1: 500 dps
   // 2: 2000 dps
@@ -60,8 +64,8 @@ void setup()
 void loop()
 {
   // Don't read gyro values until the gyro says it's ready
-  while(!digitalRead(int2pin))
-    ;  
+//  while(!digitalRead(int2pin))/
+//    ;  /
   getGyroValues();  // This will update x, y, and z with new values
   
   Serial.print(x, DEC);
@@ -72,7 +76,7 @@ void loop()
   Serial.print("\t");
   Serial.println();
   
-  //delay(100); // may want to stick this in for readability
+  delay(1 * 1000); // may want to stick this in for readability
 }
 
 int readRegister(byte address)

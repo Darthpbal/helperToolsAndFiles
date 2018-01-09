@@ -1,0 +1,9 @@
+The android applications that I've made so far have used the MIT app inventor. 
+
+
+
+
+Since I'm working on learning how to root android phones, which require the android sdk, which is apparently the normal way to actually deal with making android apps. 
+Here is the link to the installation guide. I believe I already have it installed, but it's the best starting place.
+https://developer.android.com/studio/install.html
+

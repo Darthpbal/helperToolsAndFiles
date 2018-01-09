@@ -7,113 +7,81 @@
 // The DallasTemperature library can do all this work for you!
 // http://milesburton.com/Dallas_Temperature_Control_Library
 
-OneWire  ds(5);  // on pin 10 (a 4.7K resistor is necessary)
+OneWire  ds(10);  // on pin 10 (a 4.7K resistor is necessary)
 
 void setup(void) {
   Serial.begin(9600);
-  
-  byte addr[8];
-  ds.search(addr);
-  for(int i = 0; i < 8; i++){
-    Serial.print(addr[i]);
-  }
-  Serial.println();
-
-  byte data[12];
-  float celsius, fahrenheit;
-  int16_t raw;
-
-  for(int k = 0; k < 1000; k++){
-      ds.reset();
-      ds.select(addr);
-      ds.write(0x44, 1);
-      ds.reset();
-      ds.select(addr);    
-      ds.write(0xBE);
-
-      for (int i = 0; i < 9; i++) {           // we need 9 bytes
-        data[i] = ds.read();
-      }
-
-      raw = (data[1] << 8) | data[0];
-      fahrenheit = (float)(raw / 16.0) * 1.8 + 32.0;
-      Serial.print(fahrenheit);
-      Serial.print("\t");
-      if((k % 12) == 0 ) Serial.println();
-  }
-  
-  Serial.println("\n\n");
 }
 
 void loop(void) {
   byte i;
   byte present = 0;
-  byte type_s = 0;
+  byte type_s;
   byte data[12];
   byte addr[8];
   float celsius, fahrenheit;
   
   if ( !ds.search(addr)) {
-//    Serial.println("No more addresses.");
-    Serial.print("\n");
+    Serial.println("No more addresses.");
+    Serial.println();
     ds.reset_search();
-//    delay(50);
+    delay(250);
     return;
   }
   
-//  Serial.print("ROM =");
+  Serial.print("ROM =");
   for( i = 0; i < 8; i++) {
-//    Serial.write(' ');
-//    Serial.print(addr[i], HEX);
+    Serial.write(' ');
+    Serial.print(addr[i], HEX);
   }
 
   if (OneWire::crc8(addr, 7) != addr[7]) {
       Serial.println("CRC is not valid!");
       return;
   }
-//  Serial.println();
+  Serial.println();
  
   // the first ROM byte indicates which chip
-//  switch (addr[0]) {
-//    case 0x10:
-//      Serial.println("  Chip = DS18S20");  // or old DS1820
-//      type_s = 1;
-//      break;
-//    case 0x28:
-//      Serial.println("  Chip = DS18B20");
-//      type_s = 0;
-//      break;
-//    case 0x22:
-//      Serial.println("  Chip = DS1822");
-//      type_s = 0;
-//      break;
-//    default:
-//      Serial.println("Device is not a DS18x20 family device.");
-//      return;
-//  } 
+  switch (addr[0]) {
+    case 0x10:
+      Serial.println("  Chip = DS18S20");  // or old DS1820
+      type_s = 1;
+      break;
+    case 0x28:
+      Serial.println("  Chip = DS18B20");
+      type_s = 0;
+      break;
+    case 0x22:
+      Serial.println("  Chip = DS1822");
+      type_s = 0;
+      break;
+    default:
+      Serial.println("Device is not a DS18x20 family device.");
+      return;
+  } 
 
   ds.reset();
   ds.select(addr);
   ds.write(0x44, 1);        // start conversion, with parasite power on at the end
   
-//  delay(700);     // maybe 750ms is enough, maybe not
+  delay(1000);     // maybe 750ms is enough, maybe not
   // we might do a ds.depower() here, but the reset will take care of it.
   
   present = ds.reset();
   ds.select(addr);    
   ds.write(0xBE);         // Read Scratchpad
 
-//  Serial.print("  Data = ");
-//  Serial.print(present, HEX);
-//  Serial.print(" ");
+  Serial.print("  Data = ");
+  Serial.print(present, HEX);
+  Serial.print(" ");
   for ( i = 0; i < 9; i++) {           // we need 9 bytes
     data[i] = ds.read();
-//    Serial.print(data[i], HEX);
-//    Serial.print(" ");
+    Serial.print(data[i], HEX);
+    Serial.print(" ");
   }
-//  Serial.print(" CRC=");
-//  Serial.print(OneWire::crc8(data, 8), HEX);
-//  Serial.println();
+  Serial.print(" CRC=");
+  Serial.print(OneWire::crc8(data, 8), HEX);
+  Serial.println();
 
   // Convert the data to actual temperature
   // because the result is a 16 bit signed integer, it should
@@ -136,10 +104,9 @@ void loop(void) {
   }
   celsius = (float)raw / 16.0;
   fahrenheit = celsius * 1.8 + 32.0;
-  Serial.print("Tempera/s, ");
+  Serial.print("  Temperature = ");
+  Serial.print(celsius);
+  Serial.print(" Celsius, ");
   Serial.print(fahrenheit);
-    Serial.print('\n');
-  Serial.print(" Fahrenheit");
-  Serial.println();
-  delay(500);
+  Serial.println(" Fahrenheit");
 }
