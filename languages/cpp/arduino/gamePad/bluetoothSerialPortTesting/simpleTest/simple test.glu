@@ -1,0 +1,1023 @@
+{
+  "#": {
+    "_type": "glue.core.component_id.ComponentID", 
+    "hidden": false, 
+    "label": "#"
+  }, 
+  "1": {
+    "_type": "glue.core.subset_group.SubsetGroup", 
+    "label": "1", 
+    "state": "OrState_0", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#e31a1c", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }, 
+    "subsets": [
+      "1_0"
+    ]
+  }, 
+  "1_0": {
+    "_type": "glue.core.subset_group.GroupedSubset", 
+    "group": "1", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#e31a1c", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }
+  }, 
+  "2": {
+    "_type": "glue.core.subset_group.SubsetGroup", 
+    "label": "2", 
+    "state": "OrState_4", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#33a02c", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }, 
+    "subsets": [
+      "2_0"
+    ]
+  }, 
+  "2_0": {
+    "_type": "glue.core.subset_group.GroupedSubset", 
+    "group": "2", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#33a02c", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }
+  }, 
+  "3": {
+    "_type": "glue.core.subset_group.SubsetGroup", 
+    "label": "3", 
+    "state": "OrState_1", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#1f78b4", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }, 
+    "subsets": [
+      "3_0"
+    ]
+  }, 
+  "3_0": {
+    "_type": "glue.core.subset_group.GroupedSubset", 
+    "group": "3", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#1f78b4", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }
+  }, 
+  "4": {
+    "_type": "glue.core.subset_group.SubsetGroup", 
+    "label": "4", 
+    "state": "OrState_2", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#ff55ff", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }, 
+    "subsets": [
+      "4_0"
+    ]
+  }, 
+  "4_0": {
+    "_type": "glue.core.subset_group.GroupedSubset", 
+    "group": "4", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#ff55ff", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }
+  }, 
+  "5": {
+    "_type": "glue.core.subset_group.SubsetGroup", 
+    "label": "5", 
+    "state": "OrState", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#ff7f00", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }, 
+    "subsets": [
+      "5_0"
+    ]
+  }, 
+  "5_0": {
+    "_type": "glue.core.subset_group.GroupedSubset", 
+    "group": "5", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#ff7f00", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }
+  }, 
+  "6": {
+    "_type": "glue.core.subset_group.SubsetGroup", 
+    "label": "6", 
+    "state": "OrState_3", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#6a3d9a", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }, 
+    "subsets": [
+      "6_0"
+    ]
+  }, 
+  "6_0": {
+    "_type": "glue.core.subset_group.GroupedSubset", 
+    "group": "6", 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.5, 
+      "color": "#6a3d9a", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 7
+    }
+  }, 
+  "CallbackList": {
+    "_type": "glue.external.echo.list.CallbackList", 
+    "values": [
+      "ScatterLayerState", 
+      "ScatterLayerState_0", 
+      "ScatterLayerState_1", 
+      "ScatterLayerState_2", 
+      "ScatterLayerState_3", 
+      "ScatterLayerState_4", 
+      "ScatterLayerState_5"
+    ]
+  }, 
+  "Component": {
+    "_type": "glue.core.component.Component", 
+    "log": "LoadLog", 
+    "log_item": 0
+  }, 
+  "Component_0": {
+    "_type": "glue.core.component.Component", 
+    "log": "LoadLog", 
+    "log_item": 3
+  }, 
+  "Component_1": {
+    "_type": "glue.core.component.Component", 
+    "log": "LoadLog", 
+    "log_item": 4
+  }, 
+  "Component_2": {
+    "_type": "glue.core.component.Component", 
+    "log": "LoadLog", 
+    "log_item": 5
+  }, 
+  "CoordinateComponent": {
+    "_type": "glue.core.component.CoordinateComponent", 
+    "axis": 0, 
+    "world": false
+  }, 
+  "CoordinateComponentLink": {
+    "_type": "glue.core.component_link.CoordinateComponentLink", 
+    "coords": "Coordinates", 
+    "frm": [
+      "Pixel Axis 0"
+    ], 
+    "index": 0, 
+    "pix2world": true, 
+    "to": [
+      "World 0"
+    ]
+  }, 
+  "CoordinateComponentLink_0": {
+    "_type": "glue.core.component_link.CoordinateComponentLink", 
+    "coords": "Coordinates", 
+    "frm": [
+      "World 0"
+    ], 
+    "index": 0, 
+    "pix2world": false, 
+    "to": [
+      "Pixel Axis 0"
+    ]
+  }, 
+  "CoordinateComponentLink_1": {
+    "_type": "glue.core.component_link.CoordinateComponentLink", 
+    "coords": "Coordinates", 
+    "frm": [
+      "World 0"
+    ], 
+    "index": 0, 
+    "pix2world": false, 
+    "to": [
+      "Pixel Axis 0_0"
+    ]
+  }, 
+  "CoordinateComponentLink_2": {
+    "_type": "glue.core.component_link.CoordinateComponentLink", 
+    "coords": "Coordinates", 
+    "frm": [
+      "Pixel Axis 0_0"
+    ], 
+    "index": 0, 
+    "pix2world": true, 
+    "to": [
+      "World 0"
+    ]
+  }, 
+  "CoordinateComponent_0": {
+    "_type": "glue.core.component.CoordinateComponent", 
+    "axis": 0, 
+    "world": true
+  }, 
+  "Coordinates": {
+    "_type": "glue.core.coordinates.Coordinates"
+  }, 
+  "DataCollection": {
+    "_protocol": 3, 
+    "_type": "glue.core.data_collection.DataCollection", 
+    "cids": [
+      "btn", 
+      "Pixel Axis 0", 
+      "World 0", 
+      "x", 
+      "y", 
+      "#", 
+      "Pixel Axis 0_0"
+    ], 
+    "components": [
+      "Component", 
+      "CoordinateComponent", 
+      "CoordinateComponent_0", 
+      "Component_0", 
+      "Component_1", 
+      "Component_2", 
+      "DerivedComponent"
+    ], 
+    "data": [
+      "simpleTest"
+    ], 
+    "groups": [
+      "1", 
+      "2", 
+      "3", 
+      "4", 
+      "5", 
+      "6"
+    ], 
+    "links": [
+      "CoordinateComponentLink", 
+      "CoordinateComponentLink_0", 
+      "CoordinateComponentLink_1", 
+      "CoordinateComponentLink_2"
+    ], 
+    "subset_group_count": 0
+  }, 
+  "DerivedComponent": {
+    "_type": "glue.core.component.DerivedComponent", 
+    "link": "CoordinateComponentLink_1"
+  }, 
+  "LinearSegmentedColormap": {
+    "_type": "matplotlib.colors.LinearSegmentedColormap", 
+    "cmap": "gray"
+  }, 
+  "LoadLog": {
+    "_type": "glue.core.data_factories.helpers.LoadLog", 
+    "factory": {
+      "_type": "types.FunctionType", 
+      "function": "glue.core.data_factories.helpers.auto_data"
+    }, 
+    "kwargs": [
+      []
+    ], 
+    "path": "/home/darthpbal/Downloads/bluetoothSerialPortTesting/simpleTest.csv"
+  }, 
+  "OrState": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState", 
+    "state2": "SubsetState"
+  }, 
+  "OrState_0": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_1", 
+    "state2": "OrState_6"
+  }, 
+  "OrState_1": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_2", 
+    "state2": "OrState_7"
+  }, 
+  "OrState_10": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_11", 
+    "state2": "OrState_15"
+  }, 
+  "OrState_11": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_13", 
+    "state2": "SubsetState_1"
+  }, 
+  "OrState_12": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_12", 
+    "state2": "OrState_16"
+  }, 
+  "OrState_13": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_14", 
+    "state2": "OrState_17"
+  }, 
+  "OrState_14": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_10", 
+    "state2": "SubsetState_0"
+  }, 
+  "OrState_15": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_16", 
+    "state2": "OrState_18"
+  }, 
+  "OrState_16": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_17", 
+    "state2": "OrState_19"
+  }, 
+  "OrState_17": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_15", 
+    "state2": "SubsetState_2"
+  }, 
+  "OrState_18": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_18", 
+    "state2": "SubsetState_3"
+  }, 
+  "OrState_19": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_19", 
+    "state2": "SubsetState_4"
+  }, 
+  "OrState_2": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_0", 
+    "state2": "OrState_5"
+  }, 
+  "OrState_3": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_4", 
+    "state2": "OrState_9"
+  }, 
+  "OrState_4": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_3", 
+    "state2": "OrState_8"
+  }, 
+  "OrState_5": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_9", 
+    "state2": "OrState_14"
+  }, 
+  "OrState_6": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_7", 
+    "state2": "OrState_12"
+  }, 
+  "OrState_7": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_8", 
+    "state2": "OrState_13"
+  }, 
+  "OrState_8": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_5", 
+    "state2": "OrState_10"
+  }, 
+  "OrState_9": {
+    "_type": "glue.core.subset.OrState", 
+    "state1": "RangeSubsetState_6", 
+    "state2": "OrState_11"
+  }, 
+  "Pixel Axis 0": {
+    "_type": "glue.core.component_id.PixelComponentID", 
+    "axis": 0, 
+    "hidden": true, 
+    "label": "Pixel Axis 0"
+  }, 
+  "Pixel Axis 0_0": {
+    "_type": "glue.core.component_id.ComponentID", 
+    "hidden": true, 
+    "label": "Pixel Axis 0"
+  }, 
+  "RangeSubsetState": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "btn", 
+    "hi": 123.55877278033915, 
+    "lo": -18.712659239764932
+  }, 
+  "RangeSubsetState_0": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 826.3399264533957, 
+    "lo": 774.9719511106388
+  }, 
+  "RangeSubsetState_1": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 505.0386634073759, 
+    "lo": 504.29920119034966
+  }, 
+  "RangeSubsetState_10": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 790.0569803379743, 
+    "lo": 777.0424453183123
+  }, 
+  "RangeSubsetState_11": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 578.4386690190242, 
+    "lo": 548.8739836326921
+  }, 
+  "RangeSubsetState_12": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 464.2942952492295, 
+    "lo": 444.9943313848444
+  }, 
+  "RangeSubsetState_13": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "btn", 
+    "hi": 1041.438979361656, 
+    "lo": 1007.0184716148565
+  }, 
+  "RangeSubsetState_14": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 677.9791569773621, 
+    "lo": 658.5096097778722
+  }, 
+  "RangeSubsetState_15": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 686.7718557126155, 
+    "lo": 672.4164292060792
+  }, 
+  "RangeSubsetState_16": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 583.717443298969, 
+    "lo": 569.6676611754702
+  }, 
+  "RangeSubsetState_17": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 464.8858650228505, 
+    "lo": 452.31500733340425
+  }, 
+  "RangeSubsetState_18": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 575.2136278031671, 
+    "lo": 565.4527265384206
+  }, 
+  "RangeSubsetState_19": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 461.55828504623236, 
+    "lo": 456.308103305346
+  }, 
+  "RangeSubsetState_2": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 711.1760807737272, 
+    "lo": 667.0331442661281
+  }, 
+  "RangeSubsetState_3": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 616.0664504198107, 
+    "lo": 612.7299968965883
+  }, 
+  "RangeSubsetState_4": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "btn", 
+    "hi": 1018.491974197123, 
+    "lo": 1002.4290705819499
+  }, 
+  "RangeSubsetState_5": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 615.9737711552768, 
+    "lo": 567.6878743330853
+  }, 
+  "RangeSubsetState_6": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "btn", 
+    "hi": 1023.0813752300296, 
+    "lo": 1007.0184716148565
+  }, 
+  "RangeSubsetState_7": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 504.8907709639707, 
+    "lo": 457.41729663088535
+  }, 
+  "RangeSubsetState_8": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 668.7378511637793, 
+    "lo": 646.8458257413115
+  }, 
+  "RangeSubsetState_9": {
+    "_type": "glue.core.subset.RangeSubsetState", 
+    "att": "#", 
+    "hi": 790.5499551493251, 
+    "lo": 749.9288306940164
+  }, 
+  "ScatterLayerState": {
+    "_type": "glue.viewers.scatter.state.ScatterLayerState", 
+    "values": {
+      "alpha": 0.8, 
+      "cmap": "LinearSegmentedColormap", 
+      "cmap_att": "btn", 
+      "cmap_mode": "st__Fixed", 
+      "cmap_vmax": 1023.0, 
+      "cmap_vmin": 0.0, 
+      "color": "st__0.35", 
+      "layer": "simpleTest", 
+      "line_visible": false, 
+      "linestyle": "st__solid", 
+      "linewidth": 1, 
+      "markers_visible": true, 
+      "size": 9, 
+      "size_att": "btn", 
+      "size_mode": "st__Fixed", 
+      "size_scaling": 1, 
+      "size_vmax": 1023.0, 
+      "size_vmin": 0.0, 
+      "vector_arrowhead": false, 
+      "vector_mode": "st__Cartesian", 
+      "vector_origin": "st__middle", 
+      "vector_scaling": 0.9770099572992254, 
+      "vector_visible": false, 
+      "visible": false, 
+      "vx_att": "btn", 
+      "vy_att": "btn", 
+      "xerr_att": "btn", 
+      "xerr_visible": false, 
+      "yerr_att": "btn", 
+      "yerr_visible": false, 
+      "zorder": 2
+    }
+  }, 
+  "ScatterLayerState_0": {
+    "_type": "glue.viewers.scatter.state.ScatterLayerState", 
+    "values": {
+      "alpha": 0.5, 
+      "cmap": "LinearSegmentedColormap", 
+      "cmap_att": "btn", 
+      "cmap_mode": "st__Fixed", 
+      "cmap_vmax": 1023.0, 
+      "cmap_vmin": 0.0, 
+      "color": "st__#e31a1c", 
+      "layer": "1_0", 
+      "line_visible": false, 
+      "linestyle": "st__solid", 
+      "linewidth": 1, 
+      "markers_visible": true, 
+      "size": 7, 
+      "size_att": "btn", 
+      "size_mode": "st__Fixed", 
+      "size_scaling": 1, 
+      "size_vmax": 1023.0, 
+      "size_vmin": 0.0, 
+      "vector_arrowhead": false, 
+      "vector_mode": "st__Cartesian", 
+      "vector_origin": "st__middle", 
+      "vector_scaling": 0.9770099572992254, 
+      "vector_visible": false, 
+      "visible": true, 
+      "vx_att": "btn", 
+      "vy_att": "btn", 
+      "xerr_att": "btn", 
+      "xerr_visible": false, 
+      "yerr_att": "btn", 
+      "yerr_visible": false, 
+      "zorder": 3
+    }
+  }, 
+  "ScatterLayerState_1": {
+    "_type": "glue.viewers.scatter.state.ScatterLayerState", 
+    "values": {
+      "alpha": 0.5, 
+      "cmap": "LinearSegmentedColormap", 
+      "cmap_att": "btn", 
+      "cmap_mode": "st__Fixed", 
+      "cmap_vmax": 1023.0, 
+      "cmap_vmin": 0.0, 
+      "color": "st__#33a02c", 
+      "layer": "2_0", 
+      "line_visible": false, 
+      "linestyle": "st__solid", 
+      "linewidth": 1, 
+      "markers_visible": true, 
+      "size": 7, 
+      "size_att": "btn", 
+      "size_mode": "st__Fixed", 
+      "size_scaling": 1, 
+      "size_vmax": 1023.0, 
+      "size_vmin": 0.0, 
+      "vector_arrowhead": false, 
+      "vector_mode": "st__Cartesian", 
+      "vector_origin": "st__middle", 
+      "vector_scaling": 0.9770099572992254, 
+      "vector_visible": false, 
+      "visible": true, 
+      "vx_att": "btn", 
+      "vy_att": "btn", 
+      "xerr_att": "btn", 
+      "xerr_visible": false, 
+      "yerr_att": "btn", 
+      "yerr_visible": false, 
+      "zorder": 4
+    }
+  }, 
+  "ScatterLayerState_2": {
+    "_type": "glue.viewers.scatter.state.ScatterLayerState", 
+    "values": {
+      "alpha": 0.5, 
+      "cmap": "LinearSegmentedColormap", 
+      "cmap_att": "btn", 
+      "cmap_mode": "st__Fixed", 
+      "cmap_vmax": 1023.0, 
+      "cmap_vmin": 0.0, 
+      "color": "st__#1f78b4", 
+      "layer": "3_0", 
+      "line_visible": false, 
+      "linestyle": "st__solid", 
+      "linewidth": 1, 
+      "markers_visible": true, 
+      "size": 7, 
+      "size_att": "btn", 
+      "size_mode": "st__Fixed", 
+      "size_scaling": 1, 
+      "size_vmax": 1023.0, 
+      "size_vmin": 0.0, 
+      "vector_arrowhead": false, 
+      "vector_mode": "st__Cartesian", 
+      "vector_origin": "st__middle", 
+      "vector_scaling": 0.9770099572992254, 
+      "vector_visible": false, 
+      "visible": true, 
+      "vx_att": "btn", 
+      "vy_att": "btn", 
+      "xerr_att": "btn", 
+      "xerr_visible": false, 
+      "yerr_att": "btn", 
+      "yerr_visible": false, 
+      "zorder": 5
+    }
+  }, 
+  "ScatterLayerState_3": {
+    "_type": "glue.viewers.scatter.state.ScatterLayerState", 
+    "values": {
+      "alpha": 0.5, 
+      "cmap": "LinearSegmentedColormap", 
+      "cmap_att": "btn", 
+      "cmap_mode": "st__Fixed", 
+      "cmap_vmax": 1023.0, 
+      "cmap_vmin": 0.0, 
+      "color": "st__#ff55ff", 
+      "layer": "4_0", 
+      "line_visible": false, 
+      "linestyle": "st__solid", 
+      "linewidth": 1, 
+      "markers_visible": true, 
+      "size": 7, 
+      "size_att": "btn", 
+      "size_mode": "st__Fixed", 
+      "size_scaling": 1, 
+      "size_vmax": 1023.0, 
+      "size_vmin": 0.0, 
+      "vector_arrowhead": false, 
+      "vector_mode": "st__Cartesian", 
+      "vector_origin": "st__middle", 
+      "vector_scaling": 0.9770099572992254, 
+      "vector_visible": false, 
+      "visible": true, 
+      "vx_att": "btn", 
+      "vy_att": "btn", 
+      "xerr_att": "btn", 
+      "xerr_visible": false, 
+      "yerr_att": "btn", 
+      "yerr_visible": false, 
+      "zorder": 6
+    }
+  }, 
+  "ScatterLayerState_4": {
+    "_type": "glue.viewers.scatter.state.ScatterLayerState", 
+    "values": {
+      "alpha": 0.5, 
+      "cmap": "LinearSegmentedColormap", 
+      "cmap_att": "btn", 
+      "cmap_mode": "st__Fixed", 
+      "cmap_vmax": 1023.0, 
+      "cmap_vmin": 0.0, 
+      "color": "st__#ff7f00", 
+      "layer": "5_0", 
+      "line_visible": false, 
+      "linestyle": "st__solid", 
+      "linewidth": 1, 
+      "markers_visible": true, 
+      "size": 7, 
+      "size_att": "btn", 
+      "size_mode": "st__Fixed", 
+      "size_scaling": 1, 
+      "size_vmax": 1023.0, 
+      "size_vmin": 0.0, 
+      "vector_arrowhead": false, 
+      "vector_mode": "st__Cartesian", 
+      "vector_origin": "st__middle", 
+      "vector_scaling": 0.9770099572992254, 
+      "vector_visible": false, 
+      "visible": true, 
+      "vx_att": "btn", 
+      "vy_att": "btn", 
+      "xerr_att": "btn", 
+      "xerr_visible": false, 
+      "yerr_att": "btn", 
+      "yerr_visible": false, 
+      "zorder": 7
+    }
+  }, 
+  "ScatterLayerState_5": {
+    "_type": "glue.viewers.scatter.state.ScatterLayerState", 
+    "values": {
+      "alpha": 0.5, 
+      "cmap": "LinearSegmentedColormap", 
+      "cmap_att": "btn", 
+      "cmap_mode": "st__Fixed", 
+      "cmap_vmax": 1023.0, 
+      "cmap_vmin": 0.0, 
+      "color": "st__#6a3d9a", 
+      "layer": "6_0", 
+      "line_visible": false, 
+      "linestyle": "st__solid", 
+      "linewidth": 1, 
+      "markers_visible": true, 
+      "size": 7, 
+      "size_att": "btn", 
+      "size_mode": "st__Fixed", 
+      "size_scaling": 1, 
+      "size_vmax": 1023.0, 
+      "size_vmin": 0.0, 
+      "vector_arrowhead": false, 
+      "vector_mode": "st__Cartesian", 
+      "vector_origin": "st__middle", 
+      "vector_scaling": 0.9770099572992254, 
+      "vector_visible": false, 
+      "visible": true, 
+      "vx_att": "btn", 
+      "vy_att": "btn", 
+      "xerr_att": "btn", 
+      "xerr_visible": false, 
+      "yerr_att": "btn", 
+      "yerr_visible": false, 
+      "zorder": 8
+    }
+  }, 
+  "ScatterViewer": {
+    "_protocol": 1, 
+    "_type": "glue.viewers.scatter.qt.data_viewer.ScatterViewer", 
+    "layers": [
+      {
+        "_type": "glue.viewers.scatter.layer_artist.ScatterLayerArtist", 
+        "state": "ScatterLayerState"
+      }, 
+      {
+        "_type": "glue.viewers.scatter.layer_artist.ScatterLayerArtist", 
+        "state": "ScatterLayerState_0"
+      }, 
+      {
+        "_type": "glue.viewers.scatter.layer_artist.ScatterLayerArtist", 
+        "state": "ScatterLayerState_1"
+      }, 
+      {
+        "_type": "glue.viewers.scatter.layer_artist.ScatterLayerArtist", 
+        "state": "ScatterLayerState_2"
+      }, 
+      {
+        "_type": "glue.viewers.scatter.layer_artist.ScatterLayerArtist", 
+        "state": "ScatterLayerState_3"
+      }, 
+      {
+        "_type": "glue.viewers.scatter.layer_artist.ScatterLayerArtist", 
+        "state": "ScatterLayerState_4"
+      }, 
+      {
+        "_type": "glue.viewers.scatter.layer_artist.ScatterLayerArtist", 
+        "state": "ScatterLayerState_5"
+      }
+    ], 
+    "pos": [
+      0, 
+      0
+    ], 
+    "session": "Session", 
+    "size": [
+      1074, 
+      568
+    ], 
+    "state": {
+      "values": {
+        "aspect": "st__auto", 
+        "layers": "CallbackList", 
+        "x_att": "#", 
+        "x_log": false, 
+        "x_max": 919.6072572038421, 
+        "x_min": 27.60725720384204, 
+        "y_att": "btn", 
+        "y_log": false, 
+        "y_max": 1005.2307692307693, 
+        "y_min": -17.769230769230788
+      }
+    }
+  }, 
+  "Session": {
+    "_type": "glue.core.session.Session"
+  }, 
+  "SubsetState": {
+    "_type": "glue.core.subset.SubsetState"
+  }, 
+  "SubsetState_0": {
+    "_type": "glue.core.subset.SubsetState"
+  }, 
+  "SubsetState_1": {
+    "_type": "glue.core.subset.SubsetState"
+  }, 
+  "SubsetState_2": {
+    "_type": "glue.core.subset.SubsetState"
+  }, 
+  "SubsetState_3": {
+    "_type": "glue.core.subset.SubsetState"
+  }, 
+  "SubsetState_4": {
+    "_type": "glue.core.subset.SubsetState"
+  }, 
+  "World 0": {
+    "_type": "glue.core.component_id.ComponentID", 
+    "hidden": true, 
+    "label": "World 0"
+  }, 
+  "__main__": {
+    "_type": "glue.app.qt.application.GlueApplication", 
+    "data": "DataCollection", 
+    "plugins": [
+      "glue.plugins.tools.pv_slicer", 
+      "glue.viewers.histogram", 
+      "glue.viewers.table", 
+      "glue_vispy_viewers.volume", 
+      "glue.plugins.exporters.plotly", 
+      "glue.io.formats.fits", 
+      "glue.plugins.export_d3po", 
+      "glue.viewers.image", 
+      "glue.plugins.tools.spectrum_tool", 
+      "glue.core.data_exporters", 
+      "glue.viewers.scatter", 
+      "glue.plugins.coordinate_helpers", 
+      "glue_vispy_viewers.scatter"
+    ], 
+    "session": "Session", 
+    "tab_names": [
+      "Tab 1"
+    ], 
+    "viewers": [
+      [
+        "ScatterViewer"
+      ]
+    ]
+  }, 
+  "btn": {
+    "_type": "glue.core.component_id.ComponentID", 
+    "hidden": false, 
+    "label": "btn"
+  }, 
+  "simpleTest": {
+    "_key_joins": [], 
+    "_protocol": 5, 
+    "_type": "glue.core.data.Data", 
+    "components": [
+      [
+        "btn", 
+        "Component"
+      ], 
+      [
+        "Pixel Axis 0", 
+        "CoordinateComponent"
+      ], 
+      [
+        "World 0", 
+        "CoordinateComponent_0"
+      ], 
+      [
+        "x", 
+        "Component_0"
+      ], 
+      [
+        "y", 
+        "Component_1"
+      ], 
+      [
+        "#", 
+        "Component_2"
+      ], 
+      [
+        "Pixel Axis 0_0", 
+        "DerivedComponent"
+      ]
+    ], 
+    "coords": "Coordinates", 
+    "label": "simpleTest", 
+    "primary_owner": [
+      "btn", 
+      "Pixel Axis 0", 
+      "World 0", 
+      "x", 
+      "y", 
+      "#", 
+      "Pixel Axis 0_0"
+    ], 
+    "style": {
+      "_type": "glue.core.visual.VisualAttributes", 
+      "alpha": 0.8, 
+      "color": "0.35", 
+      "linestyle": "solid", 
+      "linewidth": 1, 
+      "marker": "o", 
+      "markersize": 9
+    }, 
+    "subsets": [
+      "1_0", 
+      "2_0", 
+      "3_0", 
+      "4_0", 
+      "5_0", 
+      "6_0"
+    ], 
+    "uuid": "1c8d1401-90a1-4b6a-be36-af6eead6b6bc"
+  }, 
+  "x": {
+    "_type": "glue.core.component_id.ComponentID", 
+    "hidden": false, 
+    "label": "x"
+  }, 
+  "y": {
+    "_type": "glue.core.component_id.ComponentID", 
+    "hidden": false, 
+    "label": "y"
+  }
+}
