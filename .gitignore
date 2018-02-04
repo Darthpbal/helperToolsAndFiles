@@ -5,3 +5,5 @@ options
 index
 indxBackup
 program
+*.txt
+*.csv
