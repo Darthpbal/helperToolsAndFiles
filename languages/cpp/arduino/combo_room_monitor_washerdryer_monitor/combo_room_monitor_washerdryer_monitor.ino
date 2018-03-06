@@ -73,31 +73,34 @@ bool accelMode = false;
 
 
 
-//#include <Adafruit_ADS1015.h>
+#include <Adafruit_ADS1015.h>
 
-//Adafruit_ADS1015 adc11Bit; //construct ADC amplifier
+Adafruit_ADS1015 adc11Bit; //construct ADC amplifier
 
 // 3 acceleration axes
-//const int az = 0,
-//          ay = 1,
-//          ax = 2;
+const int az = 0,
+          ay = 1,
+          ax = 2;
 
 // used for reading instantaneous slope
-//int16_t lastAdcVal = 0;
+int16_t lastAdcVal = 0;
 
 
 
 void setup() {
-    // real time clock.
-    if (! rtc.begin()) {
-        Serial.println("Couldn't find RTC");
-        while (1);
-    }
-    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-
-
     Serial.begin(9600);
     btSerial.begin(9600);
+
+  
+    // real time clock.
+//    if (! rtc.begin()) {
+        Serial.println("Couldn't find RTC");
+//        while (1);
+//    }
+//    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+
+
+    
 
     transmitTime = millis();
 
@@ -105,7 +108,7 @@ void setup() {
     if(altimeter.connect()>0) {
         Serial.println("Error connecting pressure sensor...");
         delay(500);
-        setup();
+//        setup();
     }
 
 //    adc11Bit.setGain(GAIN_TWO); // mind the safety range if the vibration sensor is changed
@@ -319,42 +322,42 @@ if(accelMode == false){
     delay(500);
 }
 else{
-//    int16_t adcVal = adc11Bit.readADC_SingleEnded(0);
-//    adcVal += adc11Bit.readADC_SingleEnded(1);
-//    adcVal += adc11Bit.readADC_SingleEnded(2);//aggregate vibrations  in all 3 axes
-////    int16_t adcVal = analogRead(A0);
-////    adcVal = analogRead(A1);
-////    adcVal = analogRead(A2);
-//
-//    Serial.print(abs(adcVal - lastAdcVal));//print vibration value
-//    Serial.println();
-//
-//    if( abs(adcVal - lastAdcVal) > 4){//threshold, positive or negative spike magnitude
-//      if( (millis() - peakTime) < 15){//high frequency detection, if the detected thresholds have a short period, i.e. high frequency vibration
-//        digitalWrite(13, HIGH);
-//        active = true; // large magnitude and high frequency signal detected
-//      }
-//      peakTime = millis();
-//    }
-//    else{
-//      if( (millis() - peakTime) > 30000){// not shaking timeout 30 sec, washing machines have fakeout times
-//        digitalWrite(13, LOW);
-//        active = false;
-//      }
+    int16_t adcVal = adc11Bit.readADC_SingleEnded(0);
+    adcVal += adc11Bit.readADC_SingleEnded(1);
+    adcVal += adc11Bit.readADC_SingleEnded(2);//aggregate vibrations  in all 3 axes
+//    int16_t adcVal = analogRead(A0);
+//    adcVal = analogRead(A1);
+//    adcVal = analogRead(A2);
+
+    Serial.print(abs(adcVal - lastAdcVal));//print vibration value
+    Serial.println();
+
+    if( abs(adcVal - lastAdcVal) > 4){//threshold, positive or negative spike magnitude
+      if( (millis() - peakTime) < 15){//high frequency detection, if the detected thresholds have a short period, i.e. high frequency vibration
+        digitalWrite(13, HIGH);
+        active = true; // large magnitude and high frequency signal detected
+      }
+      peakTime = millis();
+    }
+    else{
+      if( (millis() - peakTime) > 30000){// not shaking timeout 30 sec, washing machines have fakeout times
+        digitalWrite(13, LOW);
+        active = false;
+      }
     }
 
-//    if( (millis() - transmitTime) >= 2000){ //transmit status every 2 second.
-//      if(active) btSerial.print("ACTIVE");
-//      else btSerial.print("INACTIVE");
-//
-//      btSerial.print(',');
-//      btSerial.print(adcVal - lastAdcVal);
-//
-//      transmitTime = millis();
-//    }
+    if( (millis() - transmitTime) >= 2000){ //transmit status every 2 second.
+      if(active) btSerial.print("ACTIVE");
+      else btSerial.print("INACTIVE");
 
-//    lastAdcVal = adcVal;//update vibration value
-//}
+      btSerial.print(',');
+      btSerial.print(adcVal - lastAdcVal);
+
+      transmitTime = millis();
+    }
+
+    lastAdcVal = adcVal;//update vibration value
+}
 }
 
 
