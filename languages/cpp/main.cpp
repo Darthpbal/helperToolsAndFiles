@@ -6,7 +6,7 @@ int fact(int input){
 }
 
 int main(){
-    cout << "Hello World\n";
+    cout << "Program to find factorial of a number \n";
     int someNum;
     while(someNum != -1){
       cout << "num=";
