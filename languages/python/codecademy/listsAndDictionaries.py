@@ -173,3 +173,15 @@ def my_function(x):
   return x
 
 print my_function(range(3)) # Add your range between the parentheses!
+
+
+
+
+
+#Sort dictionary by values
+mydict = {'carl':40,
+          'alan':2,
+          'bob':1,
+          'danny':3}
+for key, value in sorted(mydict.iteritems(), key=lambda (j,f): (f,j)):
+    print "%s: %s" % (key, value)
